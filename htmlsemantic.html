@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Semantic and Non-Semantic Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightblue;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: navy;
+            font-weight: bold;
+        }
+
+        section, article, aside, .box, form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid gray;
+        }
+
+        span {
+            color: red;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: gray;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px 0 12px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and hgroup -->
+    <header>
+        <hgroup>
+            <h1>Welcome to My HTML5 Webpage</h1>
+            <h2>Semantic and Non-Semantic Elements</h2>
+        </hgroup>
+        <p>Learning HTML5 Basics</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#students">Students</a>
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- Non-semantic elements -->
+    <div class="box" id="home">
+        <h2>Non-Semantic Elements</h2>
+        <p>
+            HTML stands for
+            <span>HyperText Markup Language</span>.
+            It is used to create web pages.
+        </p>
+        <p>
+            The div element groups content, while
+            the span element styles
+            <span>inline text</span>.
+        </p>
+    </div>
+
+    <!-- Section and mark -->
+    <section id="about">
+        <h2>About HTML5</h2>
+        <p>
+            HTML5 provides <mark>semantic elements</mark>
+            to describe the meaning of webpage content.
+        </p>
+
+        <p>
+            Published on
+            <time datetime="2026-10-28">October 28, 2026</time>.
+        </p>
+
+        <!-- Figure and figcaption -->
+        <figure>
+            <img
+                src="https://placehold.co/400x180/87ceeb/000000?text=HTML5"
+                alt="HTML5 example image">
+            <figcaption>
+                Figure 1: An example HTML5 image.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Article -->
+    <article>
+        <h2>Benefits of HTML5</h2>
+        <p>
+            HTML5 makes webpage structure easier to understand
+            and helps improve accessibility.
+        </p>
+    </article>
+
+    <!-- Aside -->
+    <aside>
+        <h2>Did You Know?</h2>
+        <p>
+            The aside element contains related information
+            such as notes, tips, or additional details.
+        </p>
+    </aside>
+
+    <!-- Table -->
+    <section id="students">
+        <h2>Student Details</h2>
+
+        <table>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Ravi</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Sita</td>
+                <td>CSS</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Rahul</td>
+                <td>JavaScript</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Form -->
+    <form id="register" action="#" method="get">
+        <h2>Student Registration Form</h2>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="course">Course:</label><br>
+        <select id="course" name="course">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My HTML5 Webpage</p>
+        <p>Created for HTML practical work.</p>
+    </footer>
+
+</body>
+</html>

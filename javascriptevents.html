@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Programs</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+        }
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Examples</h1>
+
+    <!-- 1. Event Listener: Date and Time -->
+    <div class="box">
+        <h2>1. Display Date and Time</h2>
+        <button id="dateBtn">Show Date and Time</button>
+        <p id="dateOutput"></p>
+    </div>
+
+    <!-- 2. Form Validation -->
+    <div class="box">
+        <h2>2. JavaScript Form Validation</h2>
+        <form id="myForm">
+            <input type="text" id="username" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </div>
+
+    <!-- 3. Console Debugging -->
+    <div class="box">
+        <h2>3. console.log() Debugging</h2>
+        <button id="debugBtn">Run Debugging</button>
+        <p>Press F12 and open the Console tab to see the output.</p>
+    </div>
+
+    <!-- 4. Cookies -->
+    <div class="box">
+        <h2>4. Set, Get and Check Cookie</h2>
+        <button id="setBtn">Set Cookie</button>
+        <button id="getBtn">Get Cookie</button>
+        <button id="checkBtn">Check Cookie</button>
+        <p id="cookieOutput"></p>
+    </div>
+
+    <!-- 5. JSON Object -->
+    <div class="box">
+        <h2>5. JSON Object Using Dot Notation</h2>
+        <button id="jsonBtn">Display Student Details</button>
+        <p id="jsonOutput"></p>
+    </div>
+
+    <script>
+        // 1. Display current date and time
+        document.getElementById("dateBtn").addEventListener("click", function() {
+            let now = new Date();
+            document.getElementById("dateOutput").textContent =
+                now.toLocaleString();
+        });
+
+
+        // 2. JavaScript form validation
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("username").value.trim();
+            let message = document.getElementById("formMessage");
+
+            if (name === "") {
+                message.textContent = "Textbox cannot be empty!";
+                message.style.color = "red";
+            } else {
+                message.textContent = "Form submitted successfully!";
+                message.style.color = "green";
+            }
+        });
+
+
+        // 3. console.log() for debugging
+        document.getElementById("debugBtn").addEventListener("click", function() {
+            let a = 10;
+            let b = 20;
+            let sum = a + b;
+
+            console.log("Value of a:", a);
+            console.log("Value of b:", b);
+            console.log("Sum:", sum);
+
+            alert("Check the browser console for debugging output.");
+        });
+
+
+        // 4. Functions to set, get and check cookies
+
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+
+            document.cookie = name + "=" + encodeURIComponent(value) +
+                "; expires=" + date.toUTCString() + "; path=/";
+        }
+
+        function getCookie(name) {
+            let cookies = document.cookie.split(";");
+
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+
+                if (cookie.startsWith(name + "=")) {
+                    return decodeURIComponent(
+                        cookie.substring(name.length + 1)
+                    );
+                }
+            }
+            return "";
+        }
+
+        function checkCookie(name) {
+            return getCookie(name) !== "";
+        }
+
+        document.getElementById("setBtn").addEventListener("click", function() {
+            setCookie("student", "Rahul", 7);
+            document.getElementById("cookieOutput").textContent =
+                "Cookie set successfully!";
+        });
+
+        document.getElementById("getBtn").addEventListener("click", function() {
+            let value = getCookie("student");
+            document.getElementById("cookieOutput").textContent =
+                value ? "Cookie value: " + value : "Cookie not found!";
+        });
+
+        document.getElementById("checkBtn").addEventListener("click", function() {
+            document.getElementById("cookieOutput").textContent =
+                checkCookie("student")
+                    ? "Cookie exists!"
+                    : "Cookie does not exist!";
+        });
+
+
+        // 5. Create an object and access properties using dot notation
+        document.getElementById("jsonBtn").addEventListener("click", function() {
+            let student = {
+                name: "Rahul",
+                age: 20,
+                course: "Computer Science"
+            };
+
+            console.log(student);
+
+            document.getElementById("jsonOutput").textContent =
+                "Name: " + student.name +
+                ", Age: " + student.age +
+                ", Course: " + student.course;
+        });
+    </script>
+
+</body>
+</html>

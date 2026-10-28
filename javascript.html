@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Programs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Basics Programs</h1>
+
+    <!-- 1. Single-line and Multiline Comments -->
+    <div class="box">
+        <h2>1. Single-line and Multiline Comments</h2>
+        <button onclick="showComments()">Run Program</button>
+        <p id="commentOutput"></p>
+    </div>
+
+
+    <!-- 2. Sort Fruits in Descending Order -->
+    <div class="box">
+        <h2>2. Sort Fruits in Descending Order</h2>
+        <p id="fruitOutput"></p>
+        <button onclick="sortFruits()">Sort Fruits</button>
+    </div>
+
+
+    <!-- 3. FOR/IN Loop -->
+    <div class="box">
+        <h2>3. FOR/IN Loop</h2>
+        <button onclick="showForIn()">Run FOR/IN Loop</button>
+        <p id="forInOutput"></p>
+    </div>
+
+
+    <!-- 4. Person Object and Two Accessing Methods -->
+    <div class="box">
+        <h2>4. Person Object Properties</h2>
+        <button onclick="showPerson()">Display Person</button>
+        <p id="personOutput"></p>
+    </div>
+
+
+    <!-- 5. Variable Hoisting -->
+    <div class="box">
+        <h2>5. Variable Hoisting</h2>
+        <button onclick="showHoisting()">Run Hoisting Example</button>
+        <p id="hoistingOutput"></p>
+    </div>
+
+
+    <!-- 6. Strict Mode -->
+    <div class="box">
+        <h2>6. JavaScript Strict Mode</h2>
+        <button onclick="showStrictMode()">Run Strict Mode Example</button>
+        <p id="strictOutput"></p>
+    </div>
+
+
+    <script>
+        // 1. Single-line and Multiline Comments
+
+        function showComments() {
+            // This is a single-line comment.
+
+            /*
+              This is a multiline comment.
+              It can extend across multiple lines.
+            */
+
+            document.getElementById("commentOutput").textContent =
+                "Comments explain code and are not executed.";
+        }
+
+
+        // 2. Array of fruits sorted in descending order
+
+        let fruits = ["Apple", "Mango", "Banana", "Orange", "Grapes"];
+
+        document.getElementById("fruitOutput").textContent =
+            "Fruits: " + fruits.join(", ");
+
+        function sortFruits() {
+            fruits.sort().reverse();
+
+            document.getElementById("fruitOutput").textContent =
+                "Descending order: " + fruits.join(", ");
+        }
+
+
+        // 3. FOR/IN loop
+
+        function showForIn() {
+            let student = {
+                name: "Rahul",
+                age: 20,
+                course: "JavaScript"
+            };
+
+            let result = "";
+
+            for (let key in student) {
+                result += key + ": " + student[key] + " | ";
+            }
+
+            document.getElementById("forInOutput").textContent = result;
+        }
+
+
+        // 4. Access object properties in two ways
+
+        function showPerson() {
+            let person = {
+                firstname: "Rahul",
+                lastname: "Kumar"
+            };
+
+            // Method 1: Dot notation
+            let first = person.firstname;
+            let last = person.lastname;
+
+            // Method 2: Bracket notation
+            let first2 = person["firstname"];
+            let last2 = person["lastname"];
+
+            document.getElementById("personOutput").textContent =
+                "Dot notation: " + first + " " + last +
+                " | Bracket notation: " + first2 + " " + last2;
+        }
+
+
+        // 5. Variable hoisting using var
+
+        function showHoisting() {
+            let result = hoistingExample();
+
+            document.getElementById("hoistingOutput").textContent =
+                result;
+        }
+
+        function hoistingExample() {
+            // Access the variable before its declaration.
+            let message = "Before declaration: " + value;
+
+            // Declaration and initialization happen here.
+            var value = 100;
+
+            return message + " | After initialization: " + value;
+        }
+
+
+        // 6. Strict mode and undeclared variables
+
+        function showStrictMode() {
+            try {
+                strictModeExample();
+
+                document.getElementById("strictOutput").textContent =
+                    "No error occurred.";
+            } catch (error) {
+                document.getElementById("strictOutput").textContent =
+                    "Error: " + error.name +
+                    " - " + error.message;
+            }
+        }
+
+        function strictModeExample() {
+            "use strict";
+
+            // This causes a ReferenceError because
+            // undeclaredVariable has not been declared.
+            undeclaredVariable = 50;
+        }
+    </script>
+
+</body>
+</html>

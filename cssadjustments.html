@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practical Programs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* 1. Table border and hover color */
+        .hover-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hover-table th,
+        .hover-table td {
+            border: 2px solid black;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .hover-table tr:hover {
+            background-color: lightblue;
+            color: darkblue;
+        }
+
+        /* 2. Visibility properties */
+        .visible-box {
+            visibility: visible;
+            background: lightgreen;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .hidden-box {
+            visibility: hidden;
+            background: pink;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .collapse-box {
+            visibility: collapse;
+            background: orange;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* 2. Display properties */
+        .display-none {
+            display: none;
+        }
+
+        .display-inline {
+            display: inline;
+            background: lightblue;
+            padding: 5px;
+        }
+
+        .display-block {
+            display: block;
+            background: lightgreen;
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        .display-contents {
+            display: contents;
+        }
+
+        .display-list {
+            display: list-item;
+            list-style-type: square;
+            margin-left: 25px;
+        }
+
+        /* 3. Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .long-content {
+            height: 700px;
+            padding: 20px;
+            background: #e6e6fa;
+        }
+
+        /* 4. Padding and margin */
+        .padding-example {
+            background: lightblue;
+            padding: 30px;
+            border: 3px solid blue;
+            margin: 10px;
+        }
+
+        .margin-example {
+            background: lightyellow;
+            padding: 10px;
+            border: 3px solid orange;
+            margin: 30px;
+        }
+
+        /* 5. Multiple background images */
+        .multi-background {
+            min-height: 300px;
+            padding: 20px;
+            color: white;
+            background-image:
+                url("https://placehold.co/100x100/ff6347/ffffff?text=One"),
+                url("https://placehold.co/120x120/4682b4/ffffff?text=Two"),
+                url("https://placehold.co/600x300/333333/ffffff?text=Background");
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: top left, bottom right, center;
+            background-size: 100px 100px, 120px 120px, cover;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <h1>CSS Practical Programs</h1>
+
+    <!-- 1. Table border and hover -->
+    <section>
+        <h2>1. Table Border and Hover Color</h2>
+
+        <table class="hover-table">
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Rahul</td>
+                <td>HTML</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Anita</td>
+                <td>CSS</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Ravi</td>
+                <td>JavaScript</td>
+                <td>88</td>
+            </tr>
+        </table>
+
+        <p>Move your mouse over a table row to change its color.</p>
+    </section>
+
+
+    <!-- 2. Visibility and display -->
+    <section>
+        <h2>2. Visibility and Display Properties</h2>
+
+        <h3>Visibility</h3>
+        <div class="visible-box">Visibility: visible</div>
+        <div class="hidden-box">Visibility: hidden (space remains)</div>
+        <div class="collapse-box">Visibility: collapse</div>
+
+        <h3>Display</h3>
+        <p>Normal text <span class="display-inline">Inline element</span> continues on the same line.</p>
+
+        <div class="display-block">Display: block</div>
+
+        <div class="display-none">Display: none (not displayed)</div>
+        <p>The element with display: none is not visible and takes no space.</p>
+
+        <div class="display-contents">
+            <span>This span is inside a display: contents container.</span>
+        </div>
+
+        <div class="display-list">Display: list-item</div>
+        <div class="display-list">Another list item</div>
+
+        <p>
+            Note: visibility: collapse has its clearest effect on table rows
+            and columns. On ordinary elements, its behavior may vary by browser.
+        </p>
+    </section>
+
+
+    <!-- 3. Smooth scrolling -->
+    <section>
+        <h2>3. Smooth Scrolling</h2>
+
+        <p>
+            <a href="#bottom">Click to go to bottom of page</a>
+        </p>
+
+        <div class="long-content">
+            <h3>Long Page Content</h3>
+            <p>This section creates space to demonstrate smooth scrolling.</p>
+            <p>Scroll down or use the bottom link above.</p>
+            <p>HTML is used to create the structure of a webpage.</p>
+            <p>CSS is used to style and design a webpage.</p>
+            <p>JavaScript is used to make a webpage interactive.</p>
+        </div>
+
+        <p id="bottom">
+            <a href="#top">Click to go to top of page</a>
+        </p>
+    </section>
+
+
+    <!-- 4. Padding and margin -->
+    <section>
+        <h2>4. Padding and Margin</h2>
+
+        <div class="padding-example">
+            <strong>Padding Example</strong>
+            <p>Padding is the space inside the border, around the content.</p>
+        </div>
+
+        <div class="margin-example">
+            <strong>Margin Example</strong>
+            <p>Margin is the space outside the border, separating elements.</p>
+        </div>
+    </section>
+
+
+    <!-- 5. Multiple background images -->
+    <section>
+        <h2>5. Multiple Background Images</h2>
+
+        <div class="multi-background">
+            <h3>Multiple Backgrounds</h3>
+            <p>
+                This element uses three background images with different
+                sizes and positions.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>

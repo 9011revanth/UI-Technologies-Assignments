@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Effects Practical</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: navy;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+        }
+
+        /* 1. CSS Shadow Effects and Hover Cursor */
+        .shadow-box {
+            width: 200px;
+            padding: 20px;
+            background-color: lightblue;
+            box-shadow: 5px 5px 10px gray;
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .shadow-box:hover {
+            box-shadow: 10px 10px 20px black;
+        }
+
+        .shadow-image {
+            width: 200px;
+            box-shadow: 5px 5px 10px gray;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        .shadow-image:hover {
+            box-shadow: 0 0 20px blue;
+        }
+
+        /* 2. CSS Animation */
+        .animation-box {
+            width: 100px;
+            height: 60px;
+            background-color: orange;
+            text-align: center;
+            line-height: 60px;
+
+            animation-name: moveBox;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-delay: 1s;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(0);
+                background-color: orange;
+            }
+
+            to {
+                transform: translateX(200px);
+                background-color: lightgreen;
+            }
+        }
+
+        /* Pagination without spaces */
+        .pagination a {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: blue;
+            border: 1px solid black;
+            margin: 0;
+        }
+
+        /* Pagination with spaces */
+        .pagination-space a {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: blue;
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        .pagination a:hover,
+        .pagination-space a:hover {
+            background-color: navy;
+            color: white;
+        }
+
+        /* 3. CSS Positioning */
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .relative-box {
+            position: relative;
+            left: 30px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        .position-container {
+            position: relative;
+            height: 150px;
+            border: 2px dashed gray;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: pink;
+            padding: 10px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        /* 4. Handling Overflow */
+        .overflow-box {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            overflow: scroll;
+            padding: 10px;
+        }
+
+        /* 5. Image Opacity */
+        .opacity-image {
+            width: 250px;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+
+        .opacity-image:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Effects Practical Programs</h1>
+
+    <!-- 1. Shadow Effects -->
+    <section>
+        <h2>1. CSS Shadow Effects and Hover Cursor</h2>
+
+        <div class="shadow-box">
+            Hover over this box!
+        </div>
+
+        <br>
+
+        <img class="shadow-image"
+             src="https://placehold.co/200x120/87ceeb/000000?text=Shadow+Image"
+             alt="Image demonstrating a shadow effect">
+    </section>
+
+    <!-- 2. Animation and Pagination -->
+    <section>
+        <h2>2. CSS Animation</h2>
+
+        <div class="animation-box">Animate</div>
+
+        <h3>Pagination Without Spaces</h3>
+
+        <div class="pagination">
+            <a href="#page1">1</a><a href="#page2">2</a><a href="#page3">3</a><a href="#page4">4</a>
+        </div>
+
+        <h3>Pagination With Spaces</h3>
+
+        <div class="pagination-space">
+            <a href="#page1">1</a>
+            <a href="#page2">2</a>
+            <a href="#page3">3</a>
+            <a href="#page4">4</a>
+        </div>
+    </section>
+
+    <!-- 3. Positioning -->
+    <section>
+        <h2>3. CSS Position Properties</h2>
+
+        <p class="static-box">Static Position</p>
+
+        <p class="relative-box">Relative Position (moved 30px right)</p>
+
+        <div class="position-container">
+            <p>Parent Container with Relative Position</p>
+            <p class="absolute-box">Absolute Position</p>
+        </div>
+
+        <br>
+
+        <div class="sticky-box">
+            Sticky Position: scroll the page to observe it.
+        </div>
+
+        <p>Scroll down to see the fixed box remain at the bottom-right.</p>
+    </section>
+
+    <!-- 4. Overflow -->
+    <section>
+        <h2>4. Handling Overflow Using Scroll</h2>
+
+        <div class="overflow-box">
+            This is a scrollable box. CSS overflow controls what happens
+            when content is larger than the available width or height.
+            Scroll inside this box to read the additional content.
+            Overflow can be handled using visible, hidden, auto or scroll.
+            This extra text demonstrates how a scrollbar allows the user
+            to access content that does not fit in the box.
+        </div>
+    </section>
+
+    <!-- 5. Image Opacity -->
+    <section>
+        <h2>5. Image Opacity</h2>
+
+        <p>Hover over the image to make it fully visible.</p>
+
+        <img class="opacity-image"
+             src="https://placehold.co/250x150/32cd32/000000?text=Opacity"
+             alt="Image demonstrating opacity">
+    </section>
+
+    <div class="fixed-box">
+        Fixed Position
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Practical Programs</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label {
+            display: inline-block;
+            margin: 7px 0;
+        }
+
+        input, button, select {
+            margin: 5px;
+            padding: 7px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: 2px solid black;
+        }
+
+        marquee {
+            background-color: lightblue;
+            padding: 10px;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Input Practical Programs</h1>
+
+    <!-- 1. Different Input Attributes -->
+    <section>
+        <h2>1. Different Input Attributes</h2>
+
+        <form action="#" method="get">
+            <label>Text:
+                <input type="text" name="username" placeholder="Enter name">
+            </label>
+            <br>
+
+            <label>Password:
+                <input type="password" name="password" placeholder="Password">
+            </label>
+            <br>
+
+            <label>Radio Button:
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+            <br>
+
+            <label>Checkbox:
+                <input type="checkbox" name="hobby" value="reading"> Reading
+                <input type="checkbox" name="hobby" value="sports"> Sports
+            </label>
+            <br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="Click Me"
+                   onclick="alert('Button clicked!')">
+        </form>
+    </section>
+
+
+    <!-- 2. HTML5 Input Types -->
+    <section>
+        <h2>2. HTML5 Input Types</h2>
+
+        <form>
+            <label>Number:
+                <input type="number" min="1" max="100" value="10">
+            </label>
+            <br>
+
+            <label>Range:
+                <input type="range" min="0" max="100" value="50">
+            </label>
+            <br>
+
+            <label>Color:
+                <input type="color" value="#0000ff">
+            </label>
+            <br>
+
+            <label>Date:
+                <input type="date">
+            </label>
+            <br>
+
+            <label>File:
+                <input type="file">
+            </label>
+            <br>
+
+            <label>Time:
+                <input type="time">
+            </label>
+            <br>
+
+            <label>Month:
+                <input type="month">
+            </label>
+            <br>
+
+            <label>Week:
+                <input type="week">
+            </label>
+            <br>
+
+            <label>Email:
+                <input type="email" placeholder="example@email.com">
+            </label>
+        </form>
+    </section>
+
+
+    <!-- 3. Input Restrictions -->
+    <section>
+        <h2>3. Input Restrictions</h2>
+
+        <form>
+            <label>Disabled:
+                <input type="text" value="Cannot edit" disabled>
+            </label>
+            <br>
+
+            <label>Maximum value:
+                <input type="number" min="1" max="10" value="5">
+            </label>
+            <br>
+
+            <label>Maximum length (5 characters):
+                <input type="text" maxlength="5" placeholder="5 characters">
+            </label>
+            <br>
+
+            <label>Minimum value:
+                <input type="number" min="18" value="18">
+            </label>
+            <br>
+
+            <label>Read-only:
+                <input type="text" value="Read only text" readonly>
+            </label>
+            <br>
+
+            <label>Required:
+                <input type="text" required placeholder="Required field">
+            </label>
+            <br>
+
+            <label>Size:
+                <input type="text" size="10" placeholder="Size 10">
+            </label>
+            <br>
+
+            <label>Value:
+                <input type="text" value="Default value">
+            </label>
+            <br>
+
+            <input type="submit" value="Test Restrictions">
+        </form>
+    </section>
+
+
+    <!-- 4. Target Attribute -->
+    <section>
+        <h2>4. Target Attribute</h2>
+
+        <p>
+            <a href="https://www.wikipedia.org/" target="_blank">
+                Open Wikipedia in a new tab
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.example.com/" target="_self">
+                Open Example in the current tab
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.example.com/" target="myframe">
+                Open Example inside the iframe below
+            </a>
+        </p>
+    </section>
+
+
+    <!-- 5. Iframe and Marquee -->
+    <section>
+        <h2>5. Iframe and Marquee</h2>
+
+        <h3>Marquee Example</h3>
+        <marquee direction="left" behavior="scroll">
+            Welcome to HTML Practical Programs!
+        </marquee>
+
+        <h3>Iframe Example</h3>
+        <iframe
+            name="myframe"
+            srcdoc="<h2 style='text-align:center;font-family:Arial'>Welcome to the iframe!</h2><p style='text-align:center'>Click the iframe link above to load another page here.</p>"
+            title="Example iframe">
+        </iframe>
+    </section>
+
+</body>
+</html>

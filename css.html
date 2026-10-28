@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics Practical Programs</title>
+
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #222;
+        }
+
+        /* Main heading styling */
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        /* Styling each section */
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+        }
+
+        /* 1. CSS comments example */
+        .comment-example {
+            background-color: lightyellow;
+            padding: 15px;
+        }
+
+        /* 2. Background color and fixed background image */
+        .background-example {
+            min-height: 300px;
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 4px black;
+
+            /* Set background color */
+            background-color: steelblue;
+
+            /* Real landscape photograph */
+            background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+
+            /* Background image properties */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* 3. Four different border styles */
+        .border-example {
+            padding: 20px;
+            margin: 15px 0;
+            border-width: 5px;
+            border-color: black;
+        }
+
+        .different-borders {
+            border-top-style: solid;
+            border-right-style: dashed;
+            border-bottom-style: dotted;
+            border-left-style: double;
+        }
+
+        .colored-borders {
+            border-top-color: red;
+            border-right-color: blue;
+            border-bottom-color: green;
+            border-left-color: purple;
+        }
+
+        /* 4. Height and width in pixels */
+        .pixel-box {
+            width: 300px;
+            height: 120px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Height and width in percentages */
+        .percentage-container {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            border: 2px solid gray;
+        }
+
+        .percentage-box {
+            width: 50%;
+            height: 50%;
+            background-color: lightgreen;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+
+        /* 5. Font and text styling */
+        .font-style {
+            font-style: italic;
+        }
+
+        .font-size {
+            font-size: 24px;
+        }
+
+        .font-family {
+            font-family: Georgia, serif;
+        }
+
+        .font-color {
+            color: crimson;
+        }
+
+        .text-align {
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .uppercase-text {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Basics Practical Programs</h1>
+
+    <!-- 1. CSS Comments -->
+    <section>
+        <h2>1. CSS Comments</h2>
+
+        <div class="comment-example">
+            <p>This section is styled using CSS comments.</p>
+            <p>Comments are written between /* and */ in CSS.</p>
+        </div>
+    </section>
+
+    <!-- 2. Background Color and Image -->
+    <section>
+        <h2>2. Background Color and Fixed Background Image</h2>
+
+        <div class="background-example">
+            <h3>Fixed Background Image Example</h3>
+            <p>
+                This section displays a real landscape photograph
+                as its background image.
+            </p>
+            <p>
+                Scroll the page to observe the fixed background effect.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Different Border Styles -->
+    <section>
+        <h2>3. Different Border Styles</h2>
+
+        <div class="border-example different-borders">
+            <p>Top: Solid | Right: Dashed | Bottom: Dotted | Left: Double</p>
+        </div>
+
+        <div class="border-example different-borders colored-borders">
+            <p>Different border styles with different border colors.</p>
+        </div>
+    </section>
+
+    <!-- 4. Height and Width -->
+    <section>
+        <h2>4. Height and Width in Pixels and Percentages</h2>
+
+        <h3>Pixel Dimensions</h3>
+
+        <div class="pixel-box">
+            Width: 300px<br>
+            Height: 120px
+        </div>
+
+        <h3>Percentage Dimensions</h3>
+
+        <div class="percentage-container">
+            <div class="percentage-box">
+                Width: 50%<br>
+                Height: 50%
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Font and Text Properties -->
+    <section>
+        <h2>5. Font Styles and Text Properties</h2>
+
+        <p class="font-style">
+            This text uses font-style: italic.
+        </p>
+
+        <p class="font-size">
+            This text uses font-size: 24px.
+        </p>
+
+        <p class="font-family">
+            This text uses the Georgia font family.
+        </p>
+
+        <p class="font-color">
+            This text uses a crimson font color.
+        </p>
+
+        <p class="text-align">
+            This text is center aligned.
+        </p>
+
+        <p class="bold-text">
+            This text uses bold font weight.
+        </p>
+
+        <p class="uppercase-text">
+            this text is transformed into uppercase.
+        </p>
+    </section>
+
+</body>
+</html>
